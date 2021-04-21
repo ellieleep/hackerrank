@@ -1,7 +1,7 @@
 listObject = []
 n = int(input())
 for number in range(n):
-    command = list(map(lambda x: x, input().split()))
+    command = list(x)
     if command[0] == 'insert':
         listObject.insert(int(command[1]), int(command[2]))
     elif command[0] == 'print':
