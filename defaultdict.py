@@ -11,11 +11,11 @@ dictFromLists = defaultdict(list)
 [dictFromLists['listM'].append(wordM) for wordM in listM]
 
 for wordM in dictFromLists['listM']:
+    if wordM not in dictFromLists['listN']:
+        print(-1)
     for i, wordN in enumerate(dictFromLists['listN']):
-        if wordM not in dictFromLists['listN']:
-            print(-1, end='')
-            break
         if wordM == wordN:
             print(i+1, end=' ')
+
     print()
 
