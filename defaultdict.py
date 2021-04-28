@@ -1,7 +1,4 @@
-import sys
 from collections import defaultdict
-
-# sys.stdout = open('file.log', 'w')
 
 n, m = [int(x) for x in input().split(' ')]
 
