@@ -1,4 +1,7 @@
+import sys
 from collections import defaultdict
+
+# sys.stdout = open('file.log', 'w')
 
 n, m = [int(x) for x in input().split(' ')]
 
@@ -10,7 +13,13 @@ dictFromLists = defaultdict(lambda: -1)
 for iM, wordM in enumerate(listM):
     for iN, wordN in enumerate(listN):
         if wordN == wordM and wordM not in dictFromLists.keys():
-            dictFromLists[wordM] = iN + 1
+            dictFromLists[wordM] = [iN + 1]
         elif wordN == wordM and wordM in dictFromLists.keys():
             dictFromLists[wordM].append(iN + 1)
+
+for word in listM:
+    if word in dictFromLists.keys():
+        print(*dictFromLists[word])
+    else:
+        print(dictFromLists[word])
 
