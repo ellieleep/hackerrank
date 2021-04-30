@@ -15,5 +15,4 @@ for items in range(int(numberItems)):
     else:
         itemsBought[item] += int(price)
 
-for key, value in itemsBought.items():
-    print(key, value)
+[print(key, value) for key, value in itemsBought.items()]
