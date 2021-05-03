@@ -1,4 +1,7 @@
 import re
 
 s = input()
-re.compile(r'')
+result = re.split(r'(^|,|\.)(\d*)', s)
+for x in result:
+    if not x == '' and not x == ',' and not x == '.':
+        print(x)
