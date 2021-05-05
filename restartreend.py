@@ -1,13 +1,9 @@
 import re
 
-testString = input()
-substring = input()
+S = input()
+k = input()
 
-mo = re.search(substring + '+?', testString)
+pattern = re.compile(k)
+r = pattern.search(S)
 
-start = mo.start()
-end = mo.end()
-
-tupleResult = (start, end)
-
-print(tupleResult)
+print(r)
